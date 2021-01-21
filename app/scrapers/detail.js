@@ -80,7 +80,7 @@ export const scrapeDetailPage = async (url) => {
 
     const children = Array.from(el.querySelectorAll('*'));
     const childLabels = children.map((child) => {
-      return child.querySelector('strong')?.textContent;
+      return child.querySelector('strong').textContent;
     });
 
     childLabels.forEach((label, index) => {

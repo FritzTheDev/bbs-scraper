@@ -25,18 +25,3 @@ app.get('/download', async (req, res) => {
 app.listen(process.env.PORT || 3000, () => {
   console.info('listening');
 });
-
-// async function start() {
-//   let urls;
-//   try {
-//     urls = await scrapeListPage('https://www.bizbuysell.com/florida/hvac-businesses-for-sale');
-//   } catch (err) {
-//     console.error(err);
-//   }
-//   for(let i = 0; i < urls.length; i++) {
-//     console.log(await scrapeDetailPage(urls[i]));
-//     stringify()
-//   }
-// }
-
-// start();

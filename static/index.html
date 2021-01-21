@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBS Scraper</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-10 offset-1 col-md-8 col-lg-6 offset-md-2 offset-lg-3 text-center">
+        <h1 class="text-center">BBS Scraper</h1>
+        <form id="form">
+          <label>Paste The Full BizBuySell "Search Page" URL here.</label>
+          <input
+            name="url"
+            id="url"
+            required
+            class="d-block w-100"
+            type="text"
+            placeholder="https://www.bizbuysell.com/florida/miami/hvac-businesses-for-sale"
+          />
+          <button type="submit" class="w-50 mt-3 btn btn-primary">Then Click Here</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      document.getElementById('form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        open(`/download?url=${document.getElementById('url').value}`, '_blank');
+      });
+    </script>
+  </body>
+</html>
